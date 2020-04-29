@@ -1,0 +1,117 @@
+
+<% content_for :meta_title, " #{DEFAULT_META["meta_title"]}  | Publications" %>
+<p id="notice"><%= notice %></p>
+
+
+<!-- Start of page head section
+		============================================= -->
+		<section id="page-head" class="page-head-section">
+			<div class="page-head-overlay"></div>
+			<div id="page-head-effect" class="page-head-effect">
+				<canvas id="demo-canvas"></canvas>
+			</div>
+			<!-- // page-head-style -->
+			<div class="container">
+				<div class="row">
+					<div class="banner-content">
+						<div class="page-head-content">
+							<div class="page-head-title text-capitalize pb40">
+								<h1></h1>
+								<span class="descrip"></span>
+							</div>
+							<!-- //title -->
+
+							<div class="page-head-social">
+								<div  class="social-title text-uppercase">
+									<span></span>
+								</div>
+								<!-- //title -->
+								<div class="page-head-social-item ul-li">
+									<ul class="page-head-social-list">
+										<li> <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a></li>
+										<li> <a href="#" class="social-link"
+              ><i class="fab fa-twitter"></i
+            ></a></li>
+										<li> <a href="#" class="social-link"
+              ><i class="fab fa-instagram"></i
+            ></a></li>
+										<li> <a href="#" class="social-link"
+              ><i class="fab fa-youtube"></i
+            ></a></li>
+									</ul>
+									<!-- /.page-head-social-list -->
+								</div><!-- /.page-head-social-item -->
+							</div>
+							<!-- /.page-head-social -->
+						</div>
+						<!-- /.page-head-content -->
+					</div>
+				</div><!--  /.row-->
+			</div><!--  /.container -->
+		</section>
+	<!-- End of page head section
+		============================================= -->
+
+
+
+
+
+	<!-- Start of blog page section
+		============================================= -->
+		
+		<section id="blog-main" class="blog-main-section">
+			<div class="container"> 
+			
+				<div class="row section-content">
+						<div id="filters" class="button-group pb45">
+								<button class="tab-button active" data-filter="*"><%= link_to "All", root_path %><span><%= @posts.count%></span></button>
+							<% Category.all.each do |category| %>
+								<button class="tab-button" data-filter=".web"><%= link_to category.name, posts_path(category: category.name) %><span><%= category.posts.count%></span></button>
+							<% end %>
+						</div>
+
+						<% @posts.each do |post| %>
+					<div id="posts">
+							<div class="col-md-4">
+								<div class="blog-item-content">
+									<div class="blog-main-pic">
+										<%= image_tag post.picture.url%>	
+									</div>
+									<!-- //blog-pic -->
+									<div class="blog-main-text">
+										<div class="blog-meta mt20 ul-li">
+											<ul class="meta-list">
+												<li><a><%= post.created_at.strftime("%b %d, %Y " ) %> |</a></li>
+												<li><a>| <%= post.category && post.category.name %></a></li>
+											</ul>
+										</div>
+										<!-- // .blog-meta -->
+
+										<div class="blog-main-link deep-white mt20">
+											<h2><%= post.content[0..25]... %></h2>
+										</div>
+										<!-- //.blog-main-link -->
+
+										<div class="blog-read-more mt15 text-capitalize">
+											<a><%= link_to 'Read More', post %></a> 
+										</div>
+									</div>
+									<!-- // .blog-main-text -->
+								</div>
+							</div>
+						
+							<!-- //.blog-main-text-pic -->
+
+					 </<div>
+					 <% end %> 
+					<!-- // .blog-main-content -->
+							<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+						
+					</div>
+				</div><!--  /.row -->
+			</div><!--  /.container-->
+		</section>
+	<!-- End of blog page section	
+		============================================= -->
