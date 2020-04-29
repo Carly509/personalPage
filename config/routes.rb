@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :direct_messages
+  devise_for :users
+ 
   # resources :messages
   # get 'admin/messages', to: 'messages#index'
   # get    'admin/login',   to: 'sessions#new'
@@ -7,7 +11,7 @@ Rails.application.routes.draw do
   # get     'admin/all', to:  'users#index'
   # delete 'admin/logout',  to: 'sessions#destroy'
   # get    'about',   to: 'posts#contact'
-  root 'posts#home'
+  root 'home#index'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   match "/422", to: "errors#unacceptable", :via => [:get, :post]
   match "/500", to: "errors#internal_server_error", :via => [:get, :post]
   # 301 redirect from old URLs
-  match "/old_path_to_posts/:id", to: redirect("/posts/%{id}s"), :via => [:get, :post]
+  #match "/old_path_to_posts/:id", to: redirect("/posts/%{id}s"), :via => [:get, :post]
 
     # Force www redirect
   # Start server with rails s -p 3000 -b lvh.me

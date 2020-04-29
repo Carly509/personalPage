@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+ gem 'devise'
+
  gem 'jquery-rails'
 
  gem "breadcrumbs_on_rails"
@@ -30,6 +32,8 @@ gem 'jbuilder', '~> 2.7'
  gem "serviceworker-rails"
 
  gem 'webpush'
+
+ gem 'rails_admin'
 
 gem 'will_paginate',           '3.1.7'
 gem 'will_paginate-bootstrap', '~> 1.0'

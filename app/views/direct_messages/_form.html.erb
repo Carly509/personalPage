@@ -1,0 +1,37 @@
+<%= form_with(model: direct_message, local: true) do |form| %>
+  <% if direct_message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(direct_message.errors.count, "error") %> prohibited this direct_message from being saved:</h2>
+
+      <ul>
+        <% direct_message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dm %>
+    <%= form.text_area :dm %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

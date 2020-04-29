@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @direct_message.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @direct_message.mail %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @direct_message.subject %>
+</p>
+
+<p>
+  <strong>Dm:</strong>
+  <%= @direct_message.dm %>
+</p>
+
+<%= link_to 'Edit', edit_direct_message_path(@direct_message) %> |
+<%= link_to 'Back', direct_messages_path %>
