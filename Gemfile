@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 gem 'carrierwave',          '~> 1.2.2'
-gem 'mini_magick',             ' ~>4.7.0'
+gem 'mini_magick',             '~> 4.9.4'
 gem 'bootstrap', '~> 4.3.1'
 gem "font-awesome-rails"
 
