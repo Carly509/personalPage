@@ -3,10 +3,10 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ## == CancanCan ==
   # config.authorize_with :cancancan
@@ -41,18 +41,4 @@ RailsAdmin.config do |config|
   config.authorize_with do
     redirect_to main_app.root_path unless warden.user.admin == true
    end
-end
-
-if defined?(WillPaginate)
-  module WillPaginate
-    module ActiveRecord
-      module RelationMethods
-        def per(value = nil) per_page(value) end
-        def total_count() count end
-      end
-    end
-    module CollectionMethods
-      alias_method :num_pages, :total_pages
-    end
-  end
 end

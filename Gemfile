@@ -27,8 +27,6 @@ gem 'jbuilder', '~> 2.7'
 
  gem 'jquery-rails'
 
- gem "breadcrumbs_on_rails"
-
  gem 'rails_admin'
 
 # gem "will_paginate", ">=3.0.pre2"

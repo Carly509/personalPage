@@ -13,15 +13,8 @@
 
  @import "bootstrap";
  @import "./actiontext.scss";
- *= require animate
- *= require animsition
- *= require bootstrap-grid.min
  *= require bootstrap.min
- *= require ionicons.min
  *= require jquery.pagepiling
- *= require linearicons
- *= require magnific-popup
- *= require owl.carousel
  *= require style
  *= require font-awesome
  *= require_tree .

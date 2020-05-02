@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
+  root 'home#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :direct_messages
   devise_for :users
   get "home/download_pdf"
 
-  root 'home#index'
-  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   match "/404", to: "errors#not_found", :via => [:get, :post]
