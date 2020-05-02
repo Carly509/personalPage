@@ -1,79 +1,7 @@
 
 
-    <!-- Sidebar Menu-->
-
-    <div class="menu"> 
-      <span class="close-menu right-boxed"><i class="fas fa-times"></i></span>
-      <ul class="menu-list right-boxed">
-        <li  data-menuanchor="page1">
-          <a  href="#home">Home</a>
-        </li>
-        <li  data-menuanchor="page2">
-          <a href="#specialization">Specialization</a>
-        </li>
-        <li  data-menuanchor="page3">
-          <a href="#resume">Resume</a>
-        </li>
-        <li  data-menuanchor="page4">
-          <a href="#page4">About</a>
-        </li>
-        <li  data-menuanchor="page5">
-          <a href="#page5">Projects</a>
-        </li>
-        <li  data-menuanchor="page8">
-          <a href="#page8">Contact</a>
-        </li>
-      </ul>
-      <div class="menu-footer right-boxed">
-        <div class="social-list">
-          <a href=""> <i class="fab fa-facebook-f "> </i></a>
-          <a href=""> <i class="fab fa-twitter "></i></a>
-          <a href=""> <i class="fab fa-linkedin "></i></a>
-          <a href=""> <i class="fab fa-github "></i></a>
-          
-        </div>
-        <div class="copy">© CRT <%= Date.today.year %>. All Rights Reseverd</div>
-      </div>
-    </div>
-
-    <!-- Navbar -->
-
-    <header class="navbar navbar-fullpage boxed">
-      <div class="navbar-bg"></div>
-      <a class="brand" href="#">
-        <img alt="" src="images/brand.png">
-        <div class="brand-info">
-          <div class="brand-name"></div>
-        </div>
-      </a>
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <div class="contacts d-none d-md-block">
-        <div class="contact-item">
-          +96 56-85-1379
-        </div>
-        <div class="contact-item spacer">
-          /
-        </div>
-        <div class="contact-item">
-          <a href="mailto:contact@Ramsay.com">me@tesnorcarly.com</a>
-        </div>
-      </div>
-    </header>
-    <div class="copy-bottom white boxed">© CRT <%= Date.today.year %>.</div>
-    <div class="social-list social-list-bottom boxed">
-         <a href=""> <i class="fab fa-facebook-f "> </i></a>
-          <a href=""> <i class="fab fa-twitter "></i></a>
-          <a href=""> <i class="fab fa-linkedin "></i></a>
-          <a href=""> <i class="fab fa-github "></i></a>
-      </div>
     <div class="pagepiling">
-      <div data-anchor="home" class="pp-scrollable text-white section section-1">
+      <div data-anchor="page1" class="pp-scrollable text-white section section-1">
         <div class="scroll-wrap">
           <div class="section-bg" style="background-image:url(images/bg/main.jpg);"></div>
           <div class="scrollable-content">
@@ -85,7 +13,7 @@
                       <div class="row">
                         <div class="col-md-8 col-lg-6">
                           <h1 class="display-2 text-white  wow fadeIn" data-wow-delay="0.1s"><span class="text-primary">Howdy,</span> I'm Carly</h1>
-                          <a class="popup-youtube"  href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span class="icon ion-ios-play">😁</span> </a>
+                          <a class="popup-youtube"><span class="icon ion-ios-play">😁</span> </a>
                         </div>
                       </div>
                     </div>
@@ -96,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div data-anchor="specialization" class="pp-scrollable section section-2">
+      <div data-anchor="page2" class="pp-scrollable section section-2">
         <div class="scroll-wrap">
           <div class="scrollable-content">
             <div class="vertical-title text-white  d-none d-lg-block"><span>What I Do</span></div>
@@ -124,8 +52,8 @@
                         </div>
                       </div>
                       <div class="view-all">
-                        <a href="#">
-                          Download resume
+                         <%= link_to 'Download resume', home_download_pdf_url %>
+                          
                         </a>
                       </div>
                     </div>
@@ -136,7 +64,7 @@
           </div>
         </div>
       </div>
-      <div data-anchor="resume" class="pp-scrollable text-white section section-3">
+      <div data-anchor="page3" class="pp-scrollable text-white section section-3">
         <div class="scroll-wrap">
           <div class="section-bg mask" style="background-image:url(images/bg/resume.jpg);"></div>
           <div class="scrollable-content">
@@ -208,7 +136,7 @@
                         <div class="col-lg-6 offset-xl-1">
                           <div class="experience-box">
                             <div class="experience-content">
-                              <div class="experience-number">4</div>
+                              <div class="experience-number"><%= Date.today.year - 2017%></div>
                               <div class="experience-info"><div>Years<br>Experience<br>Working</div></div>
                             </div>
                           </div>
@@ -385,24 +313,24 @@
                         <div class="col-md-6">
                           <h2 class="title"><span class="text-primary">Port-Au-Prince</span>, HAÏTI</h2>
                           <section class="contact-address">
-                            <h3><a class="mail" href="mailto:tesnorcarlt@gmnail.com"> me@tesnorcarly.com</a></h3>
+                            <h3><a class="mail" href="mailto:tesnorcarly@gmail.com"> me@tesnorcarly.com</a></h3>
                           </section>
                         </div>
                         <div class="col-md-6">
                           <div class="contact-info">
-                            <form class="js-form" novalidate="novalidate">
+                           <form action="/direct_messages" method="post" enctype="multipart/form-data" novalidate="novalidate">
                               <div class="row">
                                 <div class="form-group col-sm-6">
-                                  <input type="text" name="name" required="" placeholder="Name*" aria-required="true">
+                                  <input type="text" name="direct_message[name]" required="" placeholder="Name*" aria-required="true">
                                 </div>
                                 <div class="form-group col-sm-6">
-                                  <input type="email" required="" name="email" placeholder="Email*">
+                                  <input type="email" required="" name="direct_message[mail]" placeholder="Email*">
                                 </div>
                                 <div class="form-group col-sm-12">
-                                  <input type="text" name="subject" placeholder="Subject (Optinal)">
+                                  <input type="text" name="direct_message[subject]" placeholder="Subject (Optinal)">
                                 </div>
                                 <div class="form-group col-sm-12">
-                                  <textarea name="message" required="" placeholder="Message*"></textarea>
+                                  <textarea name="direct_message[Dm]" required="" placeholder="Message*"></textarea>
                                 </div>
                                 <div class="form-group form-group-message col-sm-12">
                                   <span id="success" class="text-primary">Thank You, your message is successfully sent!</span>

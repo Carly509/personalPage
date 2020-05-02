@@ -35,13 +35,13 @@ gem 'jbuilder', '~> 2.7'
 
  gem 'rails_admin'
 
-gem 'will_paginate',           '3.1.7'
-gem 'will_paginate-bootstrap', '~> 1.0'
+# gem "will_paginate", ">=3.0.pre2"
+# gem 'will_paginate-bootstrap', '~> 1.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'carrierwave',             '1.2.2'
-gem 'mini_magick',             '4.7.0'
+gem 'carrierwave',          '~> 1.2.2'
+gem 'mini_magick',             ' ~>4.7.0'
 gem 'bootstrap', '~> 4.3.1'
 gem "font-awesome-rails"
 gem 'nokogiri', '~> 1.6', '>= 1.6.6.2'
@@ -76,7 +76,6 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
   gem 'pg', '~> 0.18.4'
   gem 'fog', '~> 1.38'
 end

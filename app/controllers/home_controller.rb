@@ -1,7 +1,14 @@
 class HomeController < ApplicationController
   def index
-    if current_user
-     redirect_to posts_path
-    end
    end
+
+   def download_pdf
+    send_file(
+      "#{Rails.root}/public/your_file.pdf",
+      filename: "your_custom_file_name.pdf",
+      type: "application/pdf"
+    )
+  end
+  def all_project
+  end
 end

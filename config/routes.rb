@@ -2,15 +2,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :direct_messages
   devise_for :users
- 
-  # resources :messages
-  # get 'admin/messages', to: 'messages#index'
-  # get    'admin/login',   to: 'sessions#new'
-  # post   'admin/login',   to: 'sessions#create'
-  # get     'admin/new', to:  'users#new'
-  # get     'admin/all', to:  'users#index'
-  # delete 'admin/logout',  to: 'sessions#destroy'
-  # get    'about',   to: 'posts#contact'
+  get "home/download_pdf"
+
   root 'home#index'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

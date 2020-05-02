@@ -1,5 +1,6 @@
 class DirectMessagesController < ApplicationController
-  before_action :authenticate_user!
+  protect_from_forgery
+  #before_action :authenticate_user!
   before_action :set_direct_message, only: [:show, :edit, :update, :destroy]
 
   # GET /direct_messages
@@ -29,8 +30,8 @@ class DirectMessagesController < ApplicationController
 
     respond_to do |format|
       if @direct_message.save
-        format.html { redirect_to @direct_message, notice: 'Direct message was successfully created.' }
-        format.json { render :show, status: :created, location: @direct_message }
+        format.html { redirect_to root_path, notice: 'message was successfully sent.' }
+        format.json { render :show, status: :created, location: root_path }
       else
         format.html { render :new }
         format.json { render json: @direct_message.errors, status: :unprocessable_entity }

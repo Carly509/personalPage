@@ -19,5 +19,6 @@ module Tedactu
     config.active_record.default_timezone = :local # Or :utc
     config.exceptions_app = self.routes
     config.middleware.use Rack::Deflater
+    config.assets.initialize_on_precompile = false
   end
 end
