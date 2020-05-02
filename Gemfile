@@ -29,10 +29,6 @@ gem 'jbuilder', '~> 2.7'
 
  gem "breadcrumbs_on_rails"
 
- gem "serviceworker-rails"
-
- gem 'webpush'
-
  gem 'rails_admin'
 
 # gem "will_paginate", ">=3.0.pre2"
@@ -44,10 +40,6 @@ gem 'carrierwave',          '~> 1.2.2'
 gem 'mini_magick',             ' ~>4.7.0'
 gem 'bootstrap', '~> 4.3.1'
 gem "font-awesome-rails"
-gem 'nokogiri', '~> 1.6', '>= 1.6.6.2'
-gem 'httparty', '~> 0.13.7'
-
-
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
