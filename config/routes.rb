@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :direct_messages
   devise_for :users
-  get "home/download_pdf"
+  match 'download',to: "home#download_pdf" , as: 'download', via: :get
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

@@ -1,5 +1,30 @@
 <% content_for :meta_title, " #{DEFAULT_META["meta_title"]}  | Coding Turn Dream Into Reality " %>
+    
 
+    <!-- Navbar -->
+
+    <header class="navbar navbar-fullpage boxed">
+      <div class="navbar-bg"></div>
+      <a class="brand" href="#">
+        <img alt="" src="images/brand.png">
+        <div class="brand-info">
+        <!-- logo -->
+          <div class="brand-name"></div>
+        </div>
+      </a>
+      
+      <div class="contacts d-none d-md-block">
+        <div class="contact-item">
+          +(509)
+        </div>
+        <div class="contact-item spacer">
+          /
+        </div>
+        <div class="contact-item">
+          <a href="mailto:tesnorcarly@gmail.com@Ramsay.com">me@tesnorcarly.com</a>
+        </div>
+      </div>
+    </header>
     <div class="pagepiling">
       <div data-anchor="page1" class="pp-scrollable text-white section section-1">
         <div class="scroll-wrap">
@@ -60,7 +85,7 @@
                         </div>
                       </div>
                       <div class="view-all">
-                         <%= link_to 'Download resume', home_download_pdf_url %>
+                         <%= link_to 'Download resume', download_path%>
                           
                         </a>
                       </div>
@@ -90,7 +115,7 @@
                               <div class="resume-inner">
                                 <div class="resume-row">
                                   <h6 class="resume-type">Specialization course</h6>
-                                  <i class="resume-study">State University of Haiti/ Faculty of Law and Economic Cciences , Haïti, Port-au-Prince<br>Jan 2012 - Dec 2016</i>
+                                  <i class="resume-study">State University of Haiti/ Faculty of Law and Economic Sciences , Haïti, Port-au-Prince<br>Jan 2012 - Dec 2016</i>
                                   <p class="resume-text">Graduate in Economics sciences</p>
                                 </div>
                                 <div class="resume-row">
