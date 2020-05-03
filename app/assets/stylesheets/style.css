@@ -88,21 +88,21 @@ body{
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #c32865;
+  background:  rgb(119, 21, 37); 
 }
 
 ::selection{
-  background-color:#c32865;
+  background-color: rgb(119, 21, 37); 
   color:#fff;
 }
 
 -webkit-::selection{
-    background-color:#c32865;
+    background-color: rgb(119, 21, 37); 
     color:#fff;
 }
 
 ::-moz-selection{
-    background-color:#c32865;
+    background-color: rgb(119, 21, 37); 
     color:#fff;
 }
 
@@ -226,7 +226,7 @@ blockquote{
   padding: 0;
   width: 80%;
   padding-left: 6.8rem;
-  border-left: 0.3rem solid #c32865;
+  border-left: 0.3rem solid  rgb(119, 21, 37); 
   margin-top: 5rem;
   color:#fff;
 }
@@ -240,14 +240,14 @@ cite{
 }
 
 a {
-  color:#c32865;
+  color: rgb(119, 21, 37); 
   -webkit-transition: color .3s ease-out;
        -o-transition: color .3s ease-out;
           transition: color .3s ease-out;
 }
 
 a:hover {
-  color:#c32865;
+  color: rgb(119, 21, 37); 
   outline: none;
 }
 
@@ -303,7 +303,7 @@ input[type='email']:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 textarea:focus{
-  border-color: #c32865;
+  border-color:  rgb(119, 21, 37); 
   outline: 0;
   color: #fff;
 }
@@ -358,7 +358,7 @@ label.error{
   border:0;
   border-radius: 0;
   padding: 1.1em 2.28em 1em;
-  background-color: #c32865;
+  background-color:  rgb(119, 21, 37); 
   text-decoration: none;
   -webkit-transition: all .3s ease-out!important;
           transition: all .3s ease-out!important;
@@ -400,8 +400,8 @@ label.error{
 }
 
 .ion-ios-play:hover{
-  color: #c32865;
-  border: 1px solid #c32865;
+  color:  rgb(119, 21, 37); 
+  border: 1px solid  rgb(119, 21, 37); 
 }
 
 .ion-ios-play:after {
@@ -460,7 +460,7 @@ label.error{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #c32865;
+  background-color:  rgb(119, 21, 37); 
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -506,7 +506,7 @@ label.error{
 }
 
 .text-primary{
-  color:#c32865!important;
+  color: rgb(119, 21, 37)!important;
 }
 
 .masked{
@@ -657,7 +657,7 @@ a.brand:focus{
 }
 
 .navbar-toggle:hover .icon-bar{
-  background-color:  #c32865;
+  background-color:   rgb(119, 21, 37); 
 }
 
 .navbar .social-list{
@@ -692,7 +692,7 @@ a.brand:focus{
 }
 
 .social-list a:hover{
-  color:#c32865;
+  color: rgb(119, 21, 37); 
   text-decoration: none;
 }
 
@@ -836,7 +836,7 @@ a.brand:focus{
 #pp-nav .pp-nav-down:hover,
 #pp-nav.white .pp-nav-up:hover,
 #pp-nav.white .pp-nav-down:hover{
-  color: #c32865;
+  color:  rgb(119, 21, 37); 
 }
 
 #pp-nav.white .pp-nav-up,
@@ -855,7 +855,7 @@ a.brand:focus{
 
 #pp-nav li .active span, .pp-slidesNav .active span{
   opacity: 1;
-  background: #c32865;
+  background:  rgb(119, 21, 37); 
   transform:scale(1.6);
 }
 
@@ -1069,7 +1069,7 @@ a.brand:focus{
 
 .icon-specialization{
   font-size:5rem;
-  color:#c32865;
+  color: rgb(119, 21, 37); 
 }
 
 .row-specialization{
@@ -1126,7 +1126,7 @@ a.brand:focus{
 }
 
 .col-resume:hover{
-  background: #c32865;
+  background:  rgb(119, 21, 37); 
 }
 
 .resume-type{
@@ -1233,7 +1233,7 @@ a.brand:focus{
 }
 
 .progress{
-  height: 2.9rem;
+  height: 1rem;
   margin-bottom: 2rem;
   border-radius:0;
   background:  #222222;
@@ -1268,7 +1268,7 @@ a.brand:focus{
 }
 
 .progress-bar{
-  background-color:#c32865;
+  background-color: rgb(119, 21, 37); 
   height: 100%;
 }
 
@@ -1435,7 +1435,7 @@ a.brand:focus{
 
 
 .view-all a:hover{
-  color:#c32865;
+  color: rgb(119, 21, 37); 
   text-decoration: none;
 }
 
@@ -1464,6 +1464,7 @@ a.brand:focus{
   .project-detail-row .project-number{
     top:3vmin;
   }
+
 }
 
 
@@ -1683,7 +1684,7 @@ a.brand:focus{
 }
 
 .owl-dot.active span{
-  background: #c32865;
+  background:  rgb(119, 21, 37); 
   transform:scale(1.4);
 }
 
@@ -1838,7 +1839,6 @@ a.brand:focus{
   }
 
 
-
   /* Sidebar Menu */
 
 
@@ -1879,6 +1879,7 @@ a.brand:focus{
   #pp-nav .pp-nav-down{
       display: block;
   }
+ 
   
 }
 
@@ -1914,6 +1915,7 @@ a.brand:focus{
   .menu-footer .copy{
     display: block;
   }
+  
 }
 
 
@@ -1932,8 +1934,35 @@ a.brand:focus{
     display: block;
   }
   
+  
 }
 
+.change,
+.chang,
+.chan
+{
+  color: rgb(119, 21, 37);  
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 6s steps(60, end); 
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@media only screen and (max-width: 600px) {
+  .change,
+  .chang{ 
+    font-size: 44px;
+}
+
+.chan{ 
+  font-size: 40px;
+}
+}
+ 
 
 
 
